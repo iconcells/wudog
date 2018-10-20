@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+}
+
+/*For layout------------*/ 
+
+/*.mydot {
+	border-style: dotted;	
+}*/
+
+/*div {
+  border-style: dotted;
+}*/
+
+body {
+  	background-color:#eee;
+  	font-family: Gill Sans;
+  	margin:0;
+  	font-size: 100%;
+}
+
+.Landing-header {
+    background-color: #ffd5bb;
+    padding: 0em 1em;
+    height: 5em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.flex-center {
+	  align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    height: 80px;
+}
+
+.home-logo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -20px;
+    height: 60px;
+}
+
+video {
+    width: 100%;
+    height: 50%;
+    margin-top: 32%;
+}
+
+.title {
+    font-size: 1.2em;
+    margin: 5%;
+    margin-left: 9%;
+    /*text-align: center;*/
+}
+
+#explore-button {
+    padding: 6px 50px;
+    font-size: 1.0em;
+    margin-left: 29%;
+    margin-top: 20px;
+    background-color: #fcc5a4e6;
+    border-radius: 1em;
+    color: white;
+    position: relative;
+}
+
+/*For web layout (700px-more)----------*/
+
+@media (min-width: 700px) {
+    body .title {
+      font-size: 1.4em;
+	    margin-left: 10%;
+	    width: 80%;
+    }
+
+    div video {
+  		margin-top: 8%;
+  		width: 90%;
+  		margin-left: 5%;
+    	border-radius: 30px;
+	  }
+
+	  .leading {
+	    display: flex;
+	    align-items: center;
+    }
+
+	  .leading-bigtext {
+    	font-size: 140px;
+    }
+
+    /*.leading-text {
+      max-width: 50%;
+      margin-left: 6%;???????????????????????????
+    }*/
+
+    #explore-button {
+	    margin: -20px -50px;
+	    margin-top: 10px;
+	    margin-left: 41%;
+	    padding: 15px 70px;
+	    font-size: 1.2em;
+    }
+
+    img.home-logo {
+		  display: flex;
+	    flex-wrap: wrap;
+	    margin: auto;
+	    height: 80px;
+    }
+}
+
+.searchcart img{
+    height: 20px;
+    margin: -5px;
+    vertical-align: middle;
+}
+.searchcart input{
+    width:150px;
+    border: 1px solid #ccc;
+    padding: 5px 0 5px 35px;
+    background-image: url('../images/if_70_171429.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    border-radius: 1em;
+}
+
+
+
+/*HOME PAGE.....................................................................................*/
+
+a {
+   text-decoration:none;
+}
+
+.space {
+    height: 8em;
+}
+
+.home-header {
+	  background-color: #ffd5bb;
+    padding: 0em 1em;
+    height: 7em;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.flex-parent-home {
+	  display: flex;
+    margin-left: 115%;
+    padding-top: 20px;
+}
+
+.flex-parent2 {
+	  display: flex;
+    margin-left: 25%;
+    padding-top: 20px;
+}
+
+/*For web layout (700px-more)------------*/
+
+@media (min-width: 700px) {
+	  .home-header {
+		  background-color: #ffd5bb;
+	    padding: 0em 1em;
+	    height: 8em;
+	    position: fixed;
+	    width: 100%;
+	    z-index: 10;
+    }
+
+    .flex-parent-home {
+      display:flex;
+      margin-left: 82%;
+      padding-top: 0px;
+    }
+
+	  .flex-parent2 {
+		  display: flex;
+	    margin-left: 39%;
+	    padding-top: 0px;
+    }
+
+    .space {
+    	height: 9em;
+	  }
+}
+
+/*main {
+	margin-top: 100px;
+}*/
+
+.cards {
+  max-width: 960px;
+  margin: 50px auto 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 50px;
+}
+
+.leading {
+  height: 380px;
+  margin-bottom: 30px;
+  padding: 10px;
+  color: white;
+  background: url('../images/dog-cartoon-cute-background.jpg') center #333 no-repeat;
+  background-size: cover;
+  color: white;
+  text-shadow: 0px 0px 5px #000;
+}
+
+.leading-bigtext {
+    font-weight: bold;
+    font-size: 10vw;
+    margin-left: 10%;
+}
+
+.leading-text {
+    max-width: 80%;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin-left: 10%;
+}
+
+article {
+  position: relative;
+}
+
+.article-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-title {
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.view-window {
+  height:60vh;
+  position:relative;
+  background-position:center;
+  background-size:cover;
+  background-attachment: fixed;
+}
+
+.view-window>img {
+  max-width:calc(100% - 100px);
+  max-height:calc(100% - 100px);
+}
+
+#bg-first {
+  background-image:url('../images/dog-cartoon-cute-background.jpg')
+}
+
+.centered-child {
+  /*color:white;*/
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  /*width:30%;*/
+}
+
+div h2 {
+    font-weight: bold;
+    margin: 50px;
+    text-align: center;
+}
+
+div h3 {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 20px;
+    text-align: center;
+}
+
+.list-product {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+}
+
+
+/*Product Page..................................................................................*/
+
+.type {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+.media-image {
+  max-width:100%;
+  vertical-align: middle;
+}
+
+.product {
+  position:relative;
+  overflow:hidden;
+}
+.product-description {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.6);
+  transform: translateY(100%);
+  transition:all 1s;
+}
+.product:hover .product-description {
+  transform: translateY(0);
+  transition:all 0.3s;
+}
+
+.centered-child-product {
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+.cart-value {
+    position: relative;
+}
+
+/*product card------------------------------*/
+.card-bottom {
+    position: absolute;
+/*    bottom: 0px;
+    left: 22px;
+    width: 100%;
+    width: 150px;*/
+    margin: 55px;
+    margin-top: 10px;
+}
+
+.card-text {
+    /*font-family:Gill Sans;*/
+    font-size: 16px;
+    /*font-weight: 900;*/
+    color: #000;
+    /*margin: 0px 50px 0px;*/
+    text-align: center;
+    margin: 10px;
+
+}
+
+.price-section {
+    text-align: center;
+}
+
+.button-cart {
+    width: 140px;
+    margin: 10px -5px;
+}
+
+.button-cart.action {
+    box-shadow: 3px 3px 0 #f5ea77;
+    transition: none;
+    color: #FFF;
+}
+
+.button-cart {
+    line-height: 1rem;
+    transition: all .15s ease;
+    font-size: 14px;
+    background-color: #f5ea77;
+    color: #000;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 3px 3px 0 #73d2e6;
+    border-radius: 0;
+    outline: 0;
+    padding: 10px 0;
+    height: auto;
+    min-width: 165px;
+}
+
+.button-cart {
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*Gradient Buttons with Background-Color Change (CSS-only)-https://codepen.io/pirrera/pen/bqVeGx*/
+
+.btn-1 {
+  /*flex: 1 1 auto;
+  margin: 10px;
+  padding: 30px;*/
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s; 
+  background-size: 200% auto;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+
+
+.btn-1:hover {
+  background-position: right center; /* change the direction of the change here */
+}
+
+.btn-1 {
+  background-image: linear-gradient(to right, #f6d365 0%, #fda085 51%, #f6d365 100%);
+}
+
+
+
+
+
+
+
