@@ -57,11 +57,13 @@ div h3 {
 }
 
 .nav ul {
-  	list-style-type:none;
-  	padding-left:0;
-  	margin-top: 0;
-  	margin-bottom: 0;
+  	list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
 }
+
 .nav a {
   	/*display:block;*/
   	padding: 0.2em 0.9em;

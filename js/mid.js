@@ -63,24 +63,6 @@ function ProductFilterLevel1(products, filters) {
 
 // filter end---------------------------------
 
-var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 37.6611931, lng: -122.44617089999997},
-          zoom: 18
-        });
-      }
-
-
-// function myMap() {
-// var mapOptions = {
-//     center: new google.maps.LatLng(37.6611931, -122.44617089999997),
-//     zoom: 10,
-//     mapTypeId: google.maps.MapTypeId.HYBRID
-// }
-// var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-// }
-
 
 
 

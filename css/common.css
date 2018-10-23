@@ -26,7 +26,7 @@ body {
 .first-header {
     background-color: #ffd5bb;
     padding: 0em 12em;
-    height: 4em;
+    height: 5em;
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -41,6 +41,12 @@ body {
 
 .explore {
     margin: 0%;
+}
+
+img.logo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
 }
 
 .home-logo {
@@ -61,22 +67,17 @@ body {
 /*For web layout (700px-more)----------*/
 
 @media (min-width: 700px) {
-    .first-header {
-      padding: 0em 1em;
-      height: 5em;
-    }
-
 	  .leading {
 	    display: flex;
 	    align-items: center;
     }
 
-    img.home-logo {
+    /*img.logo {
 		  display: flex;
 	    flex-wrap: wrap;
 	    margin: auto;
 	    height: 80px;
-    }
+    }*/
 
     .flex-child { 
     width: 30%;  
@@ -125,8 +126,8 @@ a {
 
 .flex-parent-home {
 	  display: flex;
-    margin-left: 145%;
-    padding-top: 20px;
+    margin-left: 105%;
+    padding-top: 15%;
 }
 
 .flex-parent2 {
@@ -149,7 +150,6 @@ a {
 	  .home-header {
 		  background-color: #ffd5bb;
 	    padding: 0em 1em;
-	    height: 8em;
 	    position: fixed;
 	    width: 100%;
 	    z-index: 10;
@@ -605,15 +605,10 @@ div hr {
 .story-text {
     margin: 50px;
     text-align: left;
+    margin-top: -15px;
 }
 
-.story-hour {
-    text-align: left;
-    margin-left: 0px;
-}
-
-#map {
-  height: 100%;
-  width: 50%;
+.story-img {
+    margin-top: 4%;
 }
 
