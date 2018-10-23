@@ -19,35 +19,28 @@ body {
   	font-size: 100%;
 }
 
-.Landing-header {
+.flex-center {
+	  align-items: center;
+}
+
+.first-header {
     background-color: #ffd5bb;
-    padding: 0em 1em;
-    height: 5em;
+    padding: 0em 12em;
+    height: 4em;
     position: fixed;
     width: 100%;
     z-index: 10;
 }
 
-.flex-center {
-	  align-items: center;
-}
-
-.flex-child {   
+.flex-child {  
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,200%);
 }
 
 .explore {
     margin: 0%;
-}
-
-.logo {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    height: 80px;
 }
 
 .home-logo {
@@ -68,6 +61,10 @@ body {
 /*For web layout (700px-more)----------*/
 
 @media (min-width: 700px) {
+    .first-header {
+      padding: 0em 1em;
+      height: 5em;
+    }
 
 	  .leading {
 	    display: flex;
@@ -83,6 +80,14 @@ body {
 	    flex-wrap: wrap;
 	    margin: auto;
 	    height: 80px;
+    }
+
+    .flex-child { 
+    width: 30%;  
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%,200%);
     }
 }
 
