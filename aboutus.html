@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/grid.css">
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/mid.js"></script>
 </head>
 
 <body>
@@ -20,7 +21,7 @@
 			<div class="row flex-center">
 
 				<div class="col-sm-1 col-lg-12">
-					<img class="home-logo" src="images/dog_logo.png" alt="logo">
+					<a href="landing.html"><img class="home-logo" src="images/dog_logo.png" alt="logo"></a>
 				</div>
 
 			    <div class="col-sm-4 col-md-10 col-lg-12">
@@ -68,7 +69,7 @@
 				<div class="col-sm-12 col-lg-6">
 					<div class="card">
 						<h2 class="story-title">Our Story</h2>
-						<p class="story-text">We are a 3D printing workshop based in San Francisco CA. We have many brilliant designs from both our in house designers and the 3D printing community. Founded in 2018, the workshop has since produced more than 1000 parts. </p>
+						<p class="story-text">We are in South San Francisco, we collect all the branding of dog stuff for the dog lover. Choosing whatever you want we will get it for you. </p>
 					</div>
 				</div>	
 				<div class="col-sm-12 col-md-6 col-lg-6">
@@ -77,9 +78,9 @@
 		</div>
 		<hr>
 		<div class="row gutters">
-				<div class="col-sm-12 col-md-6">
-					<iframe width="100%" height="400" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/	v1/search?q=180+New+Montgomery+Street,San+Francisco,CA&key=AIzaSyDdEiBhzQl2zsYALLAtp64XOsWf1wnaZlo" allowfullscreen></iframe>
-				</div>
+				<div id="map" class="col-sm-12 col-md-6"></div>
+				 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpDA2ekR08Z2CtuH_e-ChRQ02VA6l-bqE&callback=initMap"
+    async defer></script>
 				
 				<div class="col-sm-12 col-md-6">
 					<div class="col-sm-12">
