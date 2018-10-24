@@ -19,9 +19,6 @@ body {
   	font-size: 100%;
 }
 
-.flex-center {
-	  align-items: center;
-}
 
 .first-header {
     background-color: #ffd5bb8c;
@@ -52,9 +49,10 @@ img.logo {
 
 .home-logo {
     display: flex;
-    flex-wrap: wrap;
-    margin-left: -20px;
     height: 70px;
+    display: flex;
+    position: relative;
+    transform: translate(-70%,0%);
 }
 
 .view-window-full {
@@ -74,9 +72,10 @@ img.logo {
     }
 
     .home-logo {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%,0%);
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      transform: translate(-50%,0%);
     }
 
     .flex-child { 
@@ -125,14 +124,17 @@ a {
 
 .flex-parent-home {
 	  display: flex;
-    margin-left: 105%;
-    padding-top: 15%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-10%,0%);
 }
 
 .flex-parent2 {
-	  display: flex;
-    margin-left: 39%;
-    padding-top: 20px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%,0%);
 }
 
 .leading-bigtext {
@@ -149,10 +151,22 @@ a {
     font-size: 1.1em;
     line-height: 1.6em;
     margin: 10%;
-    box-shadow: 0 0 5px 30px rgba(250, 250, 250, 0.33);
-    background-color: rgba(250, 250, 250, 0.81);
-    text-shadow: 0 0 0px black;
+    box-shadow: 0 0 5px 30px rgba(250, 250, 250, 0.46);
+    background-color: rgba(250, 250, 250, 0.68);
+    text-shadow: 0px 0px 0px black;
     color: #20427b;
+}
+
+.list-product {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.list-product-box {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,-5%);
 }
 
 /*For web layout (700px-more)------------*/
@@ -167,15 +181,10 @@ a {
     }
 
     .flex-parent-home {
-      display:flex;
-      margin-left: 82%;
+      display: flex;
       padding-top: 25px;
-    }
-
-	  .flex-parent2 {
-		  display: flex;
-	    /*margin-left: 39%;*/
-	    padding-top: 35px;
+      position: absolute;
+      transform: translate(100%,0%);
     }
 
     .space {
@@ -194,6 +203,28 @@ a {
       line-height: 1.6em;
       margin: 10%;
     }
+
+    .list-product {
+      display: inline-block;
+      margin-bottom: 5%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%,0%);
+    }
+
+    .list-product-box {
+      width: 50%;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .flex-parent-home {
+      display: flex;
+      padding-top: 25px;
+      position: absolute;
+      transform: translate(200%,0%);
+    }
 }
 
 /*main {
@@ -209,6 +240,7 @@ a {
 }
 
 .leading {
+  margin: 0;
   height: 400px;
   margin-bottom: 30px;
   padding: 10px;
@@ -263,14 +295,6 @@ article {
   left:50%;
   transform:translate(-50%,-50%);
   /*width:30%;*/
-}
-
-.list-product {
-    display: inline-block;
-    text-align: left;
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 4%;
 }
 
 

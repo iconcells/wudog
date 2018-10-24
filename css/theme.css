@@ -49,7 +49,7 @@ div h3 {
 }
 
 .flex-center {
-	  align-items: center;
+	align-items: center;
 }
 
 .flex-child {
@@ -92,8 +92,12 @@ div h3 {
     background-color: #FCC5A4;
     color: white;
     text-align: center;
-    height: 180px;
     padding-top: 50px;
+}
+
+.footer p {
+    font-size: 0.8em;
+    margin: 0%;
 }
 
 /*button {
