@@ -19,6 +19,19 @@ body {
   	font-size: 100%;
 }
 
+.explore {
+    margin-left: 0em;
+    margin: -10%;
+    width: 18em;
+    height: 8em;
+    /*transform: translate(10%,-30%);*/
+    transition: transform .2s;
+}
+
+.explore:hover {
+    transform: scale(1.2); 
+}
+
 
 .first-header {
     background-color: #ffd5bb8c;
@@ -34,10 +47,6 @@ body {
     top: 60%;
     left: 50%;
     transform: translate(-50%,200%);
-}
-
-.explore {
-    margin: 0%;
 }
 
 img.logo {
@@ -66,6 +75,13 @@ img.logo {
 /*For web layout (700px-more)----------*/
 
 @media (min-width: 700px) {
+    .explore {
+      margin: -20%;
+      margin-bottom: -8%;
+      width: 25em;
+      height: 10em;
+    }
+
 	  .leading {
 	    display: flex;
 	    align-items: center;
@@ -83,6 +99,12 @@ img.logo {
       top: 50%;
       position: absolute;
       transform: translate(-110%,340%);
+    }
+}
+
+@media (min-width: 1000px) {
+    .explore {
+      margin-bottom: -2%;
     }
 }
 
@@ -185,6 +207,7 @@ a {
       padding-top: 25px;
       position: absolute;
       transform: translate(100%,0%);
+      left: 45%;
     }
 
     .space {
@@ -304,11 +327,14 @@ div hr {
     margin: 1em 0;
 }
 
+.product-list {
+   width: 100%;
+}
+
 .sections {
     text-align: left;
     margin: -10px;
-    margin-left: 2%;
-    
+    margin-left: 2%;    
 }
 
 .filter-type {
@@ -316,6 +342,7 @@ div hr {
     text-align: left;
     margin: 20px;
     margin-left: 0px;
+    font-size: 1.2em;
 }
 
 .toggle {
@@ -328,6 +355,7 @@ div hr {
     text-align: left;
     margin: 30px;
     margin-left: 10px;
+    font-size: 1.2em;
 }
 
 .media-image {
@@ -336,17 +364,17 @@ div hr {
   border-radius: 10px;
 }
 
-.product {
+.product-list {
   position:relative;
   overflow:hidden;
 }
 
 /*Image Overlay Fade: w3schools.com*/
-.product:hover .image {
+.product-list:hover .image {
   opacity: 0.3;
 }
 
-.product:hover .middle {
+.product-list:hover .middle {
   opacity: 1;
 }
 
@@ -383,6 +411,7 @@ div hr {
   transform: translateY(0);
   transition:all 0.3s;
 }
+/*---------------Image Overlay Fade end*/
 
 .centered-child-product {
     position:absolute;
@@ -398,13 +427,12 @@ div hr {
 /*product card------------------------------*/
 .card-bottom {
     position: absolute;
-    margin: 55px;
-    margin-top: 16px;
-    margin-left: 25%;
+    margin-top: 15px;
+    left: 50%;
+    transform: translate(-50%,0%);;
 }
 
 .card-text {
-    /*font-family:Gill Sans;*/
     font-size: 16px;
     /*font-weight: 900;*/
     color: #000;
@@ -420,12 +448,13 @@ div hr {
 
 .button-cart {
     width: 140px;
-    margin: 10px -5px;
+    margin: 10px 0px;
+    border-radius: 30px;
 }
 
 .button-cart.action {
     box-shadow: 3px 3px 0 #f5ea77;
-    transition: none;
+    /*transition: none*/;
     color: #FFF;
 }
 
@@ -457,7 +486,7 @@ div hr {
 
 @media (min-width: 700px) {
     div hr {
-    width: 98%;
+      width: 98%;
     }
 
     .sections {
@@ -467,12 +496,10 @@ div hr {
 
     .card-bottom {
       position: absolute;
-  /*    bottom: 0px;
-      left: 22px;
-      width: 100%;
-      width: 150px;*/
       margin: 55px;
       margin-top: 10px;
+      left: auto;
+      transform: translate(0%,0%);
     }
 
     .button-cart {
@@ -512,6 +539,11 @@ div hr {
     border-radius: 10px;
 }
 
+.single-textbox {
+    margin-top: -70px;
+    float: right;
+}
+
 @media (min-width: 700px) {
     .single-img {
       width: 95%;
@@ -521,7 +553,8 @@ div hr {
 
     .single-textbox {      
       position: absolute;
-      margin-top: 0px !important;
+      margin: 5%;
+      margin-top: 5px;
     }
 
     .single-img-similar {
@@ -623,12 +656,12 @@ div hr {
     vertical-align: middle;
 }
 
-.single-textbox {
-    margin-top: -100px;
-    float: right;
-}
 
 /*About Us page......................................................................................*/
+.card-cart {
+   margin: 0px;
+}
+
 .card-story {
     margin-bottom: 0rem;
     padding: 10px;
@@ -638,15 +671,129 @@ div hr {
     font-weight: bold;
     margin: 50px;
     text-align: left;
+    font-size: 1.2em;
 }
 
 .story-text {
     margin: 50px;
     text-align: left;
-    margin-top: -15px;
+    margin-top: -25px;
 }
 
 .story-img {
     margin-top: 4%;
 }
+
+/*cart page..............................................................................................*/
+
+
+.products {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-title {
+    position: relative;
+    font-weight: bold;
+    /* margin: 33%; */
+    /* text-align: left; */
+    font-size: 1.2em;
+    padding: 0px;
+    width: 250%;
+    height: 100%;
+    transform: translate(180%,-180%);
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 60%;
+    height: 300px;
+    /* width: 100%; */
+    /* padding: 0px; */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #fda08540;
+}
+
+
+.product span {
+  font-weight: bold;
+}
+
+.product-img {
+    /* width: 120%; */
+    height: 250px;
+    margin: 20%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+.product-add-to-cart {
+  overflow: hidden;
+  clear: both;
+  margin-top: 10px;
+}
+
+.add-to-cart {
+  /*float: right;*/
+}
+
+.shopping-cart {
+    position: fixed;
+    top: 16%;
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    background: wheat;
+}
+
+.shopping-cart-head {
+  background: #a6c1ee;
+  color: white;
+  padding: 5px;
+}
+
+.shopping-cart,
+.shopping-cart-head {
+  border-radius: 5px;
+}
+
+.empty-cart-btn,
+.cart-checkout {
+  display: none;
+  
+}
+
+.empty-cart-btn {
+  margin-bottom: 5px;
+}
+
+.cart-checkout {
+  background: #f5ea77;
+}
+
+@media (min-width: 700px) {
+  .shopping-cart {
+      position: fixed;
+      top: 21%;
+      right: 0px;
+      width: 35%;
+      margin-right: 20px;
+      margin-top: 10px;
+      padding: 20px;
+      background: wheat;
+  }
+}
+
+
+
+
+
+
+
+
+
 

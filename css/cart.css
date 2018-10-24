@@ -84,7 +84,6 @@ a {
 }
 
 .product-add-to-cart {
-  overflow: hidden;
   clear: both;
   margin-top: 10px;
 }
@@ -100,7 +99,7 @@ a {
 
 .shopping-cart {
   position: fixed;
-  top: 0;
+  top: 20%;
   right: 0;
   width: 300px;
   min-heigh: 300px;

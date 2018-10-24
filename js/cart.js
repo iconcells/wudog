@@ -13,46 +13,48 @@ var ShoppingCart = (function($) {
   var products = [
     {
       id: 0,
-      name: "iPhone 6S",
+      name: "Dog Sweater",
       description: "Kogi skateboard tattooed.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 799
+      imageUrl: "images/fashion1.png",
+      price: 35.72
     },
+
     {
       id: 1,
-      name: "iPhone 5S",
+      name: "Dog Toy",
       description: "whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 349,
+      imageUrl: "images/toy1.png",
+      price: 20,
     },
-    {
-      id: 2,
-      name: "Macbook",
-      description: "Ko leggings flannel dreamcatcher.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 1499
-    },
-    {
-      id: 3,
-      name: "Macbook Air",
-      description: "fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 999
-    },
-    {
-      id: 4,
-      name: "Macbook Air 2013",
-      description: "mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 599
-    },
-    {
-      id: 5,
-      name: "Macbook Air 2012",
-      description: "book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "https://via.placeholder.com/200",
-      price: 499
-    }
+
+    // {
+    //   id: 2,
+    //   name: "Macbook",
+    //   description: "Ko leggings flannel dreamcatcher.",
+    //   imageUrl: "https://via.placeholder.com/200",
+    //   price: 1499
+    // },
+    // {
+    //   id: 3,
+    //   name: "Macbook Air",
+    //   description: "fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
+    //   imageUrl: "https://via.placeholder.com/200",
+    //   price: 999
+    // },
+    // {
+    //   id: 4,
+    //   name: "Macbook Air 2013",
+    //   description: "mlkshk leggings flannel dreamcatcher.",
+    //   imageUrl: "https://via.placeholder.com/200",
+    //   price: 599
+    // },
+    // {
+    //   id: 5,
+    //   name: "Macbook Air 2012",
+    //   description: "book mlkshk leggings flannel dreamcatcher.",
+    //   imageUrl: "https://via.placeholder.com/200",
+    //   price: 499
+    // }
   ],
       productsInCart = [];
   
@@ -61,20 +63,42 @@ var ShoppingCart = (function($) {
     products.forEach(function(item) {
       var productEl = document.createElement("div");
       productEl.className = "product";
-      productEl.innerHTML = `<div class="product-image">
-                                <img src="${item.imageUrl}" alt="${item.name}">
-                             </div>
-                             <div class="product-name"><span>Product:</span> ${item.name}</div>
-                             <!-- <div class="product-description"><span>Description:</span> ${item.description}</div> -->
-                             <div class="product-price"><span>Price:</span> ${item.price} $</div>
-                             <div class="product-add-to-cart">
-                               <!-- <a href="#0" class="button see-more">More Details</a> -->
-                               <a href="#0" class="button add-to-cart" data-id=${item.id}>Add to Cart</a>
-                             </div>
-                          </div>
-`;
-                             
-productsEl.appendChild(productEl);
+        // <div class="product-image">
+        //       <img src="${item.imageUrl}" alt="${item.name}">
+        //    </div>
+        //    <div class="product-name"><span>Product:</span> ${item.name}</div>
+        //    <!-- <div class="product-description"><span>Description:</span> ${item.description}</div> -->
+        //    <div class="product-price"><span>Price:</span> ${item.price} $</div>
+        //    <div class="product-add-to-cart">
+        //      <!-- <a href="#0" class="button see-more">More Details</a> -->
+        //      <a href="#0" class="button add-to-cart" data-id=${item.id}>Add to Cart</a>
+        //    </div>
+        // </div>
+      productEl.innerHTML = `
+      <div class="row gutters">
+       <div class="col-sm-12 col-lg-4 card-cart">
+          <div class="col-sm-6 col-lg-6 product-image">
+            <img src="${item.imageUrl}" class="product-img" alt="${item.name}">
+          </div>
+
+          <div class="col-sm-12 col-lg-4">
+            <div class="product-title">
+              <div class="product-name">
+                <span>${item.name}</span>
+              </div>
+              <div class="product-price">
+                <span>Price:</span>${item.price}
+              </div>
+              <div class="product-add-to-cart">
+                <a href="#0" class="btn-1 button-cart action js-addtocart add-to-cart" data-id=${item.id}>Add to Cart</a>
+              </div>
+            </div>
+          </div> 
+       </div>
+      </div>      
+        `;
+                 
+      productsEl.appendChild(productEl);
     });
   }
   
