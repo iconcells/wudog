@@ -14,43 +14,43 @@ var ShoppingCart = (function($) {
     {
       id: 0,
       name: "iPhone 6S",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/phone/6s/images/goldbig.jpg",
+      description: "Kogi skateboard tattooed.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 799
     },
     {
       id: 1,
       name: "iPhone 5S",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/phone/5s/images/silverbig.png",
+      description: "whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 349,
     },
     {
       id: 2,
       name: "Macbook",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/mac/macbook/images/pro.jpg",
+      description: "Ko leggings flannel dreamcatcher.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 1499
     },
     {
       id: 3,
       name: "Macbook Air",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
+      description: "fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 999
     },
     {
       id: 4,
       name: "Macbook Air 2013",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
+      description: "mlkshk leggings flannel dreamcatcher.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 599
     },
     {
       id: 5,
       name: "Macbook Air 2012",
-      description: "Kogi skateboard tattooed, whatever portland fingerstache coloring book mlkshk leggings flannel dreamcatcher.",
-      imageUrl: "http://www.icentar.me/mac/mbair/images/air.jpg",
+      description: "book mlkshk leggings flannel dreamcatcher.",
+      imageUrl: "https://via.placeholder.com/200",
       price: 499
     }
   ],
@@ -65,10 +65,10 @@ var ShoppingCart = (function($) {
                                 <img src="${item.imageUrl}" alt="${item.name}">
                              </div>
                              <div class="product-name"><span>Product:</span> ${item.name}</div>
-                             <div class="product-description"><span>Description:</span> ${item.description}</div>
+                             <!-- <div class="product-description"><span>Description:</span> ${item.description}</div> -->
                              <div class="product-price"><span>Price:</span> ${item.price} $</div>
                              <div class="product-add-to-cart">
-                               <a href="#0" class="button see-more">More Details</a>
+                               <!-- <a href="#0" class="button see-more">More Details</a> -->
                                <a href="#0" class="button add-to-cart" data-id=${item.id}>Add to Cart</a>
                              </div>
                           </div>
